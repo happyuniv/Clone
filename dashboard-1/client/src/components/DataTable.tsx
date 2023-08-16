@@ -23,7 +23,7 @@ export default function DataTable(props: Props) {
   // //   }
   // // });
 
-  const handleDelete = (id: number) => {
+  const handleDelete = (_id: number) => {
     //delete the item
     // mutation.mutate(id)
   }
