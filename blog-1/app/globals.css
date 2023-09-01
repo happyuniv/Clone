@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  transition: all 1s;
+}
+
+.light {
+  color: black;
+  background-color: white;
+}
+
+.dark {
+  color: white;
+  background-color: black;
+}
