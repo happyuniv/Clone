@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { getCategories } from '@/utils/categories'
 
 type Category = {
   id: string
@@ -10,9 +11,7 @@ type Category = {
 }
 
 const getData = async () => {
-  const res = await fetch('http://localhost:3000/api/categories', {
-    cache: 'no-store',
-  })
+  const res = await getCategories()
 
   if (!res.ok) {
     throw new Error('Failed')

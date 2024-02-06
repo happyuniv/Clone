@@ -17,14 +17,14 @@ const Pagination = ({ page, hasPrev, hasNext }: Props) => {
       <button
         className='p-4 w-[100px] bg-orange-300'
         disabled={!hasPrev}
-        onClick={() => router.push(`?page=${page - 1}`)}
+        onClick={() => router.push(`?page=${page - 1}`,{scroll:false})}
       >
         Previous
       </button>
       <button
         className='p-4 w-[100px] bg-orange-300'
         disabled={!hasNext}
-        onClick={() => router.push(`?page=${page + 1}`)}
+        onClick={() => router.push(`?page=${page + 1}`,{scroll:false})}
       >
         Next
       </button>

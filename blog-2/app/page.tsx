@@ -4,14 +4,13 @@ import Featured from '@/components/Featured'
 import Menu from '@/components/Menu'
 
 export default function Home({
-  params,
   searchParams,
 }: {
-  params: { page: string }
-  searchParams: { cat: string }
+  searchParams: { page:string,cat: string }
 }) {
-  const page = parseInt(params.page) || 1
+  const page = parseInt(searchParams.page) || 1
   const cat = searchParams.cat || ''
+
   return (
     <main className=''>
       <Featured />

@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from './Card'
 import Pagination from './Pagination'
+import { getPosts } from '@/utils/posts'
 
 type Props = {
   page: number
@@ -18,13 +19,8 @@ export type Post = {
 }
 
 const getData = async (page: number, cat: string) => {
-  const res = await fetch(
-    `http://localhost:3000/api/posts?page=${page}&cat=${cat || ''}`,
-    {
-      cache: 'no-store',
-    }
-  )
-
+  const res = await getPosts(page,cat)
+  
   if (!res.ok) {
     throw new Error('Failed')
   }
