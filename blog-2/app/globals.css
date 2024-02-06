@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.category-style {
+  background-color: #57c4ff;
+}
+
+.category-fashion {
+  background-color: #da85c8;
+}
+
+.category-food {
+  background-color: #7fb881;
+}
+
+.category-travel {
+  background-color: #ff7957;
+}
+
+.category-culture {
+  background-color: #ffb04f;
+}
+
+.category-coding {
+  background-color: #5e4fff;
+}
